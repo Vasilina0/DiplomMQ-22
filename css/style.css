@@ -1,3 +1,440 @@
-p {
-    color: red;
+@font-face {
+    font-family: OpenSans;
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: OpenSans, Arial, sans-serif;
+    margin: 0;
+}
+
+.header {
+    padding-top: 2.5rem;
+    padding-bottom: 6.9rem;
+
+    background: url("/images/football_1920.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+
+    color: #ffffff;
+}
+
+.header::after {
+    content: "";
+    background-color: #0a0e34;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.90;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    text-transform: uppercase;
+}
+
+.header, .main, .footer {
+    width: 100%;
+    box-sizing: border-box;
+ 
+
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+span {
+    display: block;
+}
+
+.logo-surface {
+    text-align: center;
+}
+
+.logo-text {
+      fill: #ffffff;
+}
+
+.welcome {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-title {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+
+.link {
+    background-color: #5e42b0;
+    
+    border: 1px solid #5e42b0;
+       
+    font-family: OpenSans;
+    font-weight: 400;
+    text-transform: uppercase;
+    vertical-align: middle;
+       
+}
+
+
+.app-google {
+
+    font-family: OpenSans-Bold;
+    font-weight: 700;
+
+}
+
+
+.section {
+    display: flex;
+}
+
+
+
+@media (max-width: 640px) {
+
+    .header {
+        padding-top: 30px;
+        padding-bottom: 80px;
+
+        background-image: url(/images/football_767.jpg);
+    
+    }
+
+    .header, .main, .footer {
+       
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo-text {
+        width: 135px;
+        height: auto;
+    
+    }
+
+   .welcome-title {
+
+        width: 320px;
+        font-size: 28px;
+        letter-spacing: 1px;
+        line-height: 31px;
+        
+        font-family: OpenSans-Bold;
+        font-weight: 700;
+        text-align: left;
+
+        padding-top: 130px;
+        padding-bottom: 85px;
+
+   }
+
+    .welcome-title-play {
+        
+        padding-left: 17%;
+        padding-top: 30px;
+
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .links {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+   
+    .link {
+        width: 280px;
+        height: 11%;
+        box-sizing: border-box;
+        
+        border-radius: 25px;
+
+        font-size: 8px;
+        letter-spacing: 0px;
+
+        margin-bottom: 13px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 108px; 
+    }
+
+    .apple {
+        background-image: url("/svg/apple_logo_white.svg");
+        
+        background-size: 25px 25px;
+        background-position: left 80px center;
+        background-repeat: no-repeat;
+        
+    }
+    
+    .google {
+        background-image: url("/svg/google-play.svg");
+        
+        background-size: 25px 25px;
+        background-position: left 80px center;
+        background-repeat: no-repeat;
+        
+    }
+
+    .section {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .section-image {
+        order: 1;
+
+        width: 100%;
+    }
+}
+
+@media (min-width: 641px) {
+    .links {
+        display: flex;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+    
+    .header {
+        padding-top: 35px;
+        padding-bottom: 90px;
+
+        background-image: url(/images/football_1280.jpg);
+    }
+
+    .header, .main, .footer {
+       
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    
+    .logo-text {
+        width: 210px;
+        height: auto;
+    }
+
+    .welcome-title {
+
+        width: 595px;
+        font-size: 64px;
+        letter-spacing: 3px;
+        line-height: 94px;
+        font-family: OpenSans-Bold;
+        font-weight: 700;
+        text-align: left;
+
+        padding-top: 180px;
+        padding-bottom: 305px;
+
+        margin-right: auto;
+        margin-left: auto;
+
+   }
+
+    .welcome-title-play {
+        
+        padding-left: 17%;
+        
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .links {
+        width: 658px;
+        margin-left: auto;
+        margin-right: auto;
+
+        
+    }
+   
+    .link {
+        min-width: 315px;
+        height: 82px;
+        box-sizing: border-box;
+                
+        border-radius: 41px;
+
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 16px;
+        color: #ffffff;
+        font-family: OpenSans;
+        font-weight: 300;
+                
+        padding-top: 23px;
+        padding-bottom: 23px;
+                   
+    }
+
+    .link:nth-child(1n+2) {
+        margin-left: 25px;
+    }
+
+    .apple {
+        background-image: url("/svg/apple_logo_white.svg");
+        
+        background-size: 50px 50px;
+        background-position: left 44px center;
+        background-repeat: no-repeat;
+        
+        padding-left: 115px;
+    }
+    
+    .google {
+        background-image: url("/svg/google-play.svg");
+        
+        background-size: 50px 50px;
+        background-position: left 55px center;
+        background-repeat: no-repeat;
+        
+        padding-left: 128px;
+    }
+
+}
+
+@media (min-width: 961px) and (max-width: 1920px){
+    
+    .header {
+        padding-top: 45px;
+        padding-bottom: 105px;
+
+        background-image: url(/images/football_1920.jpg);
+    }
+
+    .header, .main, .footer {
+       
+        max-width: 1555px;
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+        .logo-text {
+        width: 190px;
+        height: auto;
+    }
+
+    .welcome-title {
+
+        max-width: 1555px;
+        min-width: calc(961px - 60px);
+        font-size: 90px;
+        letter-spacing: 5px;
+        line-height: 100px;
+        font-family: OpenSans-Bold;
+        font-weight: 700;
+        text-align: left;
+
+        padding-top: 180px;
+        padding-bottom: 305px;
+
+        margin-right: auto;
+        margin-left: auto;
+
+   }
+
+    .welcome-title-play {
+        
+        text-align: right;
+        
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .links {
+        width: 658px;
+        margin-left: auto;
+        margin-right: auto;
+
+        
+    }
+   
+    .link {
+        min-width: 315px;
+        height: 82px;
+        box-sizing: border-box;
+                
+        border-radius: 41px;
+
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 16px;
+        color: #ffffff;
+        font-family: OpenSans;
+        font-weight: 300;
+                
+        padding-top: 23px;
+        padding-bottom: 23px;
+                   
+    }
+
+    .link:nth-child(1n+2) {
+        margin-left: 25px;
+    }
+
+    .apple {
+        background-image: url("/svg/apple_logo_white.svg");
+        
+        background-size: 50px 50px;
+        background-position: left 44px center;
+        background-repeat: no-repeat;
+        
+        padding-left: 115px;
+    }
+    
+    .google {
+        background-image: url("/svg/google-play.svg");
+        
+        background-size: 50px 50px;
+        background-position: left 55px center;
+        background-repeat: no-repeat;
+        
+        padding-left: 128px;
+    }
+
+    
+}
+
+@media (min-width: 1921px) {
+    
+    .header {
+        background-image: url(/images/football_1920.jpg);
+    }
+    
+    .logo-text {
+        width: 190px;
+        height: auto;
+    }
+
+
 }
